@@ -7,7 +7,7 @@ import (
 	"os"
 
 	splunk "github.com/brittonhayes/splunk-go"
-	"github.com/brittonhayes/splunk-go/internal"
+	"github.com/brittonhayes/splunk-golang/internal"
 	"github.com/logrusorgru/aurora"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
