@@ -102,7 +102,7 @@ var controlsCmd = &cobra.Command{
 	Tip: Pipe into jq for prettified output`,
 	Run: func(cmd *cobra.Command, args []string) {
 		internal.Help(cmd, args)
-		fmt.Println(listControls(args[0]))
+		fmt.Println(inspectControl(args[0]))
 	},
 }
 
@@ -120,13 +120,13 @@ func restartSplunk() string {
 	return response
 }
 
-func listControls(endpoint string) string {
+func inspectControl(endpoint string) string {
 	conn := splunk.Connection{
 		Username: viper.GetString("SPLUNK_USERNAME"),
 		Password: viper.GetString("SPLUNK_PASSWORD"),
 		BaseURL:  viper.GetString("SPLUNK_URL"),
 	}
-	response, err := conn.ListControls(endpoint)
+	response, err := conn.InspectControl(endpoint)
 	if err != nil {
 		log.Fatal(au.Red("Couldn't list actions for this endpoint. Check your input and try again."))
 	}
