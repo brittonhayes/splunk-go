@@ -15,6 +15,7 @@ import (
  * HTTP helper methods
  */
 
+//  nosec
 func httpClient() *http.Client {
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{
