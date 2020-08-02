@@ -21,8 +21,11 @@ jobs:
 
       - name: Format Code
         run: go fmt ./pkg
+
       - name: Run Gosec Security Scanner
         uses: securego/gosec@master
+        env:
+          GO111MODULE: on
         with:
           args: -severity high -confidence high ./...
   create_comment:
