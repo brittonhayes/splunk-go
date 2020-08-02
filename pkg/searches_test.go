@@ -1,9 +1,10 @@
 package splunk
 
 import (
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestICouldSearchSync(t *testing.T) {
@@ -15,7 +16,8 @@ func TestICouldSearchSync(t *testing.T) {
 	require.NotNil(t, sessionKey, "error on searching")
 
 	searchString := "search index=_internal linecount=1"
-	searchResponse, _ := connection.SearchSync(searchString)
+	outputMode := "json"
+	searchResponse, _ := connection.SearchSync(searchString, outputMode)
 	require.NotNil(t, searchResponse, "error on searching")
 }
 
@@ -28,7 +30,8 @@ func TestICouldSearchSyncLongQuery(t *testing.T) {
 	require.NotNil(t, sessionKey, "error on searching")
 
 	searchString := "search index=_internal|head 100"
-	searchResponse, _ := connection.SearchSync(searchString)
+	outputMode := "json"
+	searchResponse, _ := connection.SearchSync(searchString, outputMode)
 	assert.Contains(t, searchResponse, "linecount", "error on searching")
 	require.NotNil(t, searchResponse, "error on searching")
 }
