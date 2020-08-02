@@ -7,8 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    name: CI
+  CI:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x
