@@ -21,6 +21,10 @@ jobs:
 
       - name: Format Code
         run: go fmt ./pkg
+      - name: Run Gosec Security Scanner
+        uses: securego/gosec@master
+        with:
+          args: -severity high -confidence high ./...
   create_comment:
     runs-on: ubuntu-latest
     needs: CI
