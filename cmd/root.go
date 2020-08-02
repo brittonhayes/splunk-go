@@ -17,14 +17,14 @@ var (
 	au      aurora.Aurora
 	colors  = flag.Bool("colors", true, "enable or disable colors")
 	rootCmd = &cobra.Command{
-		Use:   "splunk-golang",
+		Use:   "splunk-go",
 		Short: "A Splunk REST API client written in GO.",
 	}
 )
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.splunk-golang.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.splunk-go.yaml)")
 }
 
 func initConfig() {
@@ -37,7 +37,7 @@ func initConfig() {
 			os.Exit(1)
 		}
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".splunk-golang")
+		viper.SetConfigName(".splunk-go")
 	}
 
 	viper.AutomaticEnv()

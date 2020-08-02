@@ -7,7 +7,7 @@
 > `splunk-go` is a Splunk REST API Client written in GO designed to allow common tasks for Splunk usage and administration to be conducted through an easy-to-use command line tool.
 
 <p>
-  <a href="https://pkg.go.dev/github.com/brittonhayes/splunk-golang?tab=overview" target="_blank">
+  <a href="https://pkg.go.dev/github.com/brittonhayes/splunk-go?tab=overview" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
 </p>
@@ -54,7 +54,7 @@ make build
 
 or
 
-go build -o ./bin/splunk-golang main.go
+go build -o ./bin/splunk-go main.go
 
 # Cross-compile for all systems
 make cross-compile
@@ -73,7 +73,7 @@ or
 make run
 ```
 
-This will output a message like the following: [Help Output](https://github.com/brittonhayes/splunk-golang/tree/master/docs/splunk-golang.md)
+This will output a message like the following: [Help Output](https://github.com/brittonhayes/splunk-go/tree/master/docs/splunk-go.md)
 
 ## Adding features to the project
 

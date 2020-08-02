@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	splunk "github.com/brittonhayes/splunk-go"
-	"github.com/brittonhayes/splunk-golang/internal"
+	"github.com/brittonhayes/splunk-go/internal"
+	splunk "github.com/brittonhayes/splunk-go/pkg"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -27,7 +27,7 @@ var SearchCmd = &cobra.Command{
 	Long: `The search command is used to perform search queries via the Splunk REST API. 
 Searching splunk using the CLI requires one argument of a SPL file containing your search.
 
-e.g. splunk-golang search ~/.splunk-golang/searches/my-search.spl
+e.g. splunk-go search ~/.splunk-go/searches/my-search.spl
 
 `,
 	Run: func(cmd *cobra.Command, args []string) {
