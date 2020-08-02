@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/brittonhayes/splunk-golang/internal"
-	splunk "github.com/brittonhayes/splunk-golang/pkg"
+	splunk "github.com/brittonhayes/splunk-go"
+	"github.com/brittonhayes/splunk-go/internal"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

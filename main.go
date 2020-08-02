@@ -1,6 +1,6 @@
 package main
 
-import "github.com/brittonhayes/splunk-golang/cmd"
+import "github.com/brittonhayes/splunk-go/cmd"
 
 func main() {
 	cmd.Execute()

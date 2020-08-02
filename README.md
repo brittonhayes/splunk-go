@@ -4,23 +4,23 @@
 
 <h1 align="center">Splunk Golang REST API Client</h1>
 
-> `splunk-golang` is a Splunk REST API Client written in GO designed to allow common tasks for Splunk usage and administration to be conducted through an easy-to-use command line tool.
+> `splunk-go` is a Splunk REST API Client written in GO designed to allow common tasks for Splunk usage and administration to be conducted through an easy-to-use command line tool.
 
 <p>
-  <a href="https://github.com/brittonhayes/splunk-golang/tree/master/docs/splunk-golang.md" target="_blank">
+  <a href="https://pkg.go.dev/github.com/brittonhayes/splunk-golang?tab=overview" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
 </p>
 
-### 🏠 [Homepage](https://github.com/brittonhayes/splunk-golang)
+### 🏠 [Homepage](https://github.com/brittonhayes/splunk-go
 
-### ✨ [Examples](https://github.com/brittonhayes/splunk-golang/tree/master/examples)
+### ✨ [Examples](https://github.com/brittonhayes/splunk-goe/master/examples)
 
 ## Install
 
 ```sh
 # Clone the repository
-git clone https://github.com/brittonhayes/splunk-golang
+git clone https://github.com/brittonhayes/splunk-go
 
 # Install dependencies
 make dependencies
@@ -93,7 +93,7 @@ This will output a message like the following: [Help Output](https://github.com/
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check the [issues page](https://github.com/brittonhayes/splunk-golang/issues). You can also take a look at the [contributing guide](https://github.com/brittonhayes/splunk-golang/tree/master/contributing.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check the [issues page](https://github.com/brittonhayes/splunk-goues). You can also take a look at the [contributing guide](https://github.com/brittonhayes/splusplunk-goster/contributing.md).
 
 ## Acknowledgements
 

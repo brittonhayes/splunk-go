@@ -1,4 +1,4 @@
-module github.com/brittonhayes/splunk-golang
+module github.com/brittonhayes/splunk-go
 
 go 1.14
 

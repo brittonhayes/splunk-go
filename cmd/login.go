@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	splunk "github.com/brittonhayes/splunk-golang/pkg"
+	splunk "github.com/brittonhayes/splunk-go/pkg"
 	"github.com/logrusorgru/aurora"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
