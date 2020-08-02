@@ -22,3 +22,13 @@ jobs:
 
       - name: Format Code
         run: go fmt ./pkg
+  create_comment:
+    runs-on: ubuntu-latest
+    needs: CI
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-create-comment@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          body: |
+            :hamster: Looks good, @${{ github.actor }}!
