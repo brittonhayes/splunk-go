@@ -1,72 +1,35 @@
-# Splunk REST API Client
+<h1 align="center">Splunk GO REST API Client 🐹</h1>
+<p>
+  <a href="https://github.com/brittonhayes/splunk-golang/tree/master/docs/splunk-go.md" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+</p>
 
-A Splunk REST API Client written in Golang.
+> A Splunk REST API Client written in GO. This command line tool was designed to allow common tasks for Splunk usage and administration to be conducted through an easy-to-use command line tool.
 
-## Table of Contents :notebook:
+### 🏠 [Homepage](https://github.com/brittonhayes/splunk-golang)
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Support](#support)
-- [Contributing](#contributing)
+### ✨ [Examples](https://github.com/brittonhayes/splunk-golang/tree/master/examples)
 
-![Go](https://github.com/brittonhayes/splunk-golang/workflows/Go/badge.svg)
+## Install
 
-## Installation :cloud:
-
-1. Install the package from Github
-
-```
+```sh
 git clone https://github.com/brittonhayes/splunk-golang
 ```
 
-## Usage :hammer:
+## Usage
 
-1. Navigate to the project directory
-
-2. Run the entry file
-
-```bash
-go run main.go
+```sh
+go run main.go --help
 ```
 
-3. Use the Splunk REST API CLI!
+## Run tests
 
-## Examples
-
-### Using the package to run without intervention
-
-```go
-package main
-
-import (
-    "fmt"
-    "os"
-    "github.com/logrusorgru/aurora"
-    "github.com/brittonhayes/splunk-golang"
-    "github.com/spf13/viper"
-)
-
-func init() {
-	au = aurora.NewAurora(*colors)
-}
-
-func main() {
-    conn := splunk.Connection{
-        Username: viper.GetString("SPLUNK_USERNAME"),
-        Password: viper.GetString("SPLUNK_PASSWORD"),
-        BaseURL:  viper.GetString("SPLUNK_URL"),
-    }
-
-    key, err := conn.Login()
-    if err != nil {
-        log.Fatal(au.Red("Couldn't login to Splunk. Ensure your configuration is correct."))
-    }
-
-    fmt.Println("Logged in Successfully. \nSession key:", au.BrightBlue(key.Value))
-}
+```sh
+go run main.go test
 ```
 
-### Using the package's CLI
+## Using the binary
 
 Once the binary is compiled and added to your path, you can utilize the CLI to perform Splunk operations.
 
@@ -83,46 +46,36 @@ go build -o ./bin/splunk-go .
 splunk-go --help
 ```
 
-This will output a message like the following:
+This will output a message like the following: [Help Output](https://github.com/brittonhayes/splunk-golang/tree/master/docs/splunk-go.md)
 
-```
-A Splunk REST API client written in GO.
+## Adding features to the project
 
-Usage:
-  splunk-go [command]
+1. Navigate to the `pkg` directory of the repository and add a new `*.go` file with your added functionality.
 
-Available Commands:
-  help        Help about any command
-  login       Authenticate to Splunk and return a session token.
-  restart     Restart the Splunk instance
-  search      Search Splunk for events.
+2. Run `cobra add [command_name]` and the Cobra CLI tool will add a new `*.go` file for your command.
 
-Flags:
-      --config string   config file (default is $HOME/.splunk-go.yaml)
-  -h, --help            help for splunk-go
-
-Use "splunk-go [command] --help" for more information about a command.
-
-```
-
-### Adding features to the package
-
-1. Navigate to the `pkg` directory of the repository and add a new \*.go file.
-
-2. Import your function or type from the new file into the `main.go` if you want it to run without interventon.
-
-3. Import your function or type from the new file into the `cmd` directory if you want to add it to the CLI.
+3. After creating your command, run `go docs` to automatically update the documentation of all CLI commands.
 
 ---
 
-## Support
+## Author
 
-Please [open an issue](https://github.com/brittonhayes/splunk-golang/issues/new) for support.
+👤 **Britton Hayes**
 
-## Contributing
+- Github: [@brittonhayes](https://github.com/brittonhayes)
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/brittonhayes/splunk-golang/compare/).
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check the [issues page](https://github.com/brittonhayes/splunk-golang/issues). You can also take a look at the [contributing guide](https://github.com/brittonhayes/splunk-golang/tree/master/contributing.md).
 
 ## Acknowledgements
 
 Social image from [Ashley Mcnamara](https://github.com/ashleymcnamara/gophers)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

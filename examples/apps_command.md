@@ -1,3 +1,4 @@
+```go
 package cmd
 
 import (
@@ -47,3 +48,4 @@ func appInspect(path string) string {
 
 	return response
 }
+```

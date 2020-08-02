@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:b95738a1e6ace058b5b8544303c0871fc01d224ef0d672f778f696265d0f2917"
+  name = "github.com/chzyer/readline"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "62c6fe6193755f722b8b8788aa7357be55a50ff1"
+  version = "v1.4"
+
+[[projects]]
   digest = "1:7cb4fdca4c251b3ef8027c90ea35f70c7b661a593b9eeae34753c65499098bb1"
   name = "github.com/cpuguy83/go-md2man"
   packages = ["md2man"]
@@ -53,6 +61,17 @@
   version = "v1.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:e51f40f0c19b39c1825eadd07d5c0a98a2ad5942b166d9fc4f54750ce9a04810"
+  name = "github.com/juju/ansiterm"
+  packages = [
+    ".",
+    "tabwriter",
+  ]
+  pruneopts = "UT"
+  revision = "720a0952cc2ac777afc295d9861263e2a4cf96a1"
+
+[[projects]]
   digest = "1:ba852707958e39694e7f64328008287892adf9b1aed0174480e2f50e0c23e521"
   name = "github.com/logrusorgru/aurora"
   packages = ["."]
@@ -61,12 +80,48 @@
   version = "v2.0"
 
 [[projects]]
+  digest = "1:2dc8db55c5b223e6cd50aa7915e698cfcf56d1ddfa89bbbf65e24729e0a0200a"
+  name = "github.com/lunixbochs/vtclean"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "88cfb0c2efe8ed7b0ccf0af83db39359829027bb"
+  version = "v1.0.0"
+
+[[projects]]
   digest = "1:5a0ef768465592efca0412f7e838cdc0826712f8447e70e6ccc52eb441e9ab13"
   name = "github.com/magiconair/properties"
   packages = ["."]
   pruneopts = "UT"
   revision = "de8848e004dd33dc07a2947b3d76f618a7fc7ef1"
   version = "v1.8.1"
+
+[[projects]]
+  digest = "1:f2b92e72b56816dae962f7682fe8a9ff9689e51e26fef937910a1704e8514336"
+  name = "github.com/manifoldco/promptui"
+  packages = [
+    ".",
+    "list",
+    "screenbuf",
+  ]
+  pruneopts = "UT"
+  revision = "e15db710812c111cce939cc7028ca3d15a6e7b8b"
+  version = "v0.7.0"
+
+[[projects]]
+  digest = "1:864f9b9a3bc9255934cbb5e94d5f761d726085894915403289fbae6fb3415f98"
+  name = "github.com/mattn/go-colorable"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "f6c00982823144337e56cdb71c712eaac151d29c"
+  version = "v0.1.7"
+
+[[projects]]
+  digest = "1:0c58d31abe2a2ccb429c559b6292e7df89dcda675456fecc282fa90aa08273eb"
+  name = "github.com/mattn/go-isatty"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "7b513a986450394f7bbf1476909911b3aa3a55ce"
+  version = "v0.0.12"
 
 [[projects]]
   digest = "1:5d231480e1c64a726869bc4142d270184c419749d34f167646baa21008eb0a79"
@@ -244,6 +299,7 @@
   analyzer-version = 1
   input-imports = [
     "github.com/logrusorgru/aurora",
+    "github.com/manifoldco/promptui",
     "github.com/mitchellh/go-homedir",
     "github.com/spf13/cobra",
     "github.com/spf13/cobra/doc",
