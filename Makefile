@@ -4,6 +4,9 @@ dependencies:
 format:
 	go fmt .
 
+docs:
+	go run main.go docs
+
 security:
 	gosec -severity high -confidence high -quiet ./...
 
@@ -19,4 +22,4 @@ cross-compile:
 run:
 	go run main.go
 
-all: dependencies format security build
+all: dependencies format security docs build

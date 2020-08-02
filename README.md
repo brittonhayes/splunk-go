@@ -19,19 +19,27 @@
 ## Install
 
 ```sh
+# Clone the repository
 git clone https://github.com/brittonhayes/splunk-golang
+
+# Install dependencies
+make dependencies
 ```
 
 ## Usage
 
 ```sh
+# From entrypoint
 go run main.go --help
+
+# To run with CI
+make all
 ```
 
 ## Run tests
 
 ```sh
-go run main.go test
+make security
 ```
 
 ## Using the binary
@@ -41,14 +49,28 @@ Once the binary is compiled and added to your path, you can utilize the CLI to p
 1. Build the binary
 
 ```shell
-go build -o ./bin/splunk-go .
+# Build your OS's binary
+make build
+
+or
+
+go build -o ./bin/splunk-go main.go
+
+# Cross-compile for all systems
+make cross-compile
 
 ```
 
 2. Run the help command to get a list of possible actions
 
 ```shell
-splunk-go --help
+# Using the entrypoint
+go run main.go --help
+
+or
+
+# Using the Makefile
+make run
 ```
 
 This will output a message like the following: [Help Output](https://github.com/brittonhayes/splunk-golang/tree/master/docs/splunk-go.md)
@@ -59,7 +81,7 @@ This will output a message like the following: [Help Output](https://github.com/
 
 2. Run `cobra add [command_name]` and the Cobra CLI tool will add a new `*.go` file for your command.
 
-3. After creating your command, run `go docs` to automatically update the documentation of all CLI commands.
+3. After creating your command, run `make docs` to automatically update the documentation of all CLI commands.
 
 ---
 
